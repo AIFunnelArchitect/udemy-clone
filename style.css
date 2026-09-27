@@ -52,6 +52,10 @@ body {
     align-items: center;
 }
 
+.navbar__s4 {
+    display: none;
+}
+
 /* My learning Popup*/
 
 .mylearning {
@@ -70,9 +74,9 @@ body {
     display: none;
 }
 
-.mylearning:hover .mylearning__popup{
-display: block;
-} 
+.mylearning:hover .mylearning__popup {
+    display: block;
+}
 
 
 .catagories {
@@ -91,10 +95,10 @@ display: block;
     border: solid #A345f0 1px;
 }
 
-.catagories p:hover{
+.catagories p:hover {
     transition: 1s;
     background-color: transparent;
-    color: black;   
+    color: black;
     border: solid #A345f0 1px;
 }
 
@@ -117,18 +121,18 @@ display: block;
     animation-name: zoom;
     animation-duration: 2s;
     opacity: 0;
-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 
 @keyframes zoom {
-    0%{
-transform: scale(0);
-opacity: 0;
+    0% {
+        transform: scale(0);
+        opacity: 0;
     }
 
-    100%{
-transform: scale(1);
-opacity: 1;
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
 }
 
@@ -145,8 +149,9 @@ opacity: 1;
 }
 
 .course-card {
-    height: 50%;
-    width: 300px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 }
 
 .course-card img {
@@ -204,4 +209,24 @@ opacity: 1;
     justify-content: space-between;
     margin: 20px;
     align-items: center;
+}
+
+@media screen and (max-width:800px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .course-card {
+        flex-basis: 40%;
+    }
+
+    .catagories {
+        display: none;
+    }
+
+    .navbar__s4 {
+        display: block;
+    }
 }
